@@ -1,0 +1,417 @@
+body {
+  background-color: #ffff;
+  margin-top: 0;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-sizing: border-box;
+}
+.main {
+  --largeur: 1200px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/*début header*/
+
+.header {
+  width: 100%;
+  height: 120px;
+  background-color: #b1dde8;
+  padding-top: 10px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container-header ul {
+  width: 100%;
+}
+
+.container-header img {
+  vertical-align: middle;
+}
+
+.container-header li {
+  display: inline;
+  font-size: 20px;
+  color: #ffff;
+  margin: 10px;
+}
+.container-header li:hover,
+.container-header li a:hover {
+  color: black;
+}
+.container-header li a {
+  text-decoration: none;
+  color: #ffff;
+  margin-left: 20px;
+}
+#imgtel {
+  width: 30px;
+}
+#imgmail {
+  width: 60px;
+}
+/*fin header*/
+
+/*image avec logo & titre */
+
+#caroussel {
+  background: url("/assets/images/mika-piscines.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%; /* width of container */
+  height: 500px; /* height of container */
+  object-fit: cover;
+  /*object-position: 0 1200px;*/
+}
+.container_title {
+  display: block;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  float: right;
+  transform: translateY(50%);
+  max-width: 100%;
+  right: 0;
+}
+
+#title {
+  position: relative;
+  max-width: 100%;
+  vertical-align: middle;
+  color: #ffff;
+  text-transform: uppercase;
+}
+
+#img1logo img {
+  display: block;
+  transform: translateY(50%);
+  position: relative;
+
+  bottom: -10%;
+  left: -100px;
+  width: 430px;
+}
+
+#grandetaille {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+/*menu navigation */
+
+/*hamburger*/
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+/*selection de l'image hamburger*/
+.dropdown img {
+  height: 30px;
+}
+
+/*selection de la liste du menu */
+
+.dropdown a {
+  text-decoration: none;
+  align-content: center;
+}
+
+/*début Bloc navigation desktop */
+
+.navigation ul {
+  display: block;
+  text-align: right;
+}
+/*selection des blocs de la liste*/
+.navigation li {
+  display: inline;
+  margin: 20px;
+  font-size: 20px;
+}
+/* Lien de navigation menu*/
+.navigation li a {
+  text-decoration: none;
+  color: black;
+}
+/*navigation au survol avec transition*/
+.navigation li a:hover {
+  background-color: grey;
+
+  transition: 0.5s;
+}
+
+/* Lien de navigation menu 2*/
+.navigation2 {
+  display: block;
+}
+
+.navigation2 ul {
+  display: block;
+  text-align: center;
+}
+/*selection des blocs de la liste*/
+.navigation2 li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Lien de navigation menu*/
+.navigation2 li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  padding: 8px 14px 9px;
+}
+/*lien actif*/
+.navigation2 li a:active {
+  background-color: #b1dde8;
+}
+
+/*navigation au survol avec transition*/
+.navigation2 li a:hover {
+  background-color: #b1dde8;
+  transition: 0.5s;
+  color: #fff;
+}
+
+/*fin Bloc navigation */
+
+#services h2,
+#realisation h2 {
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#services p,
+#realisation p {
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*-----services*/
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+
+  column-gap: 40px;
+}
+
+#services .services-bloc {
+  width: 30%;
+  max-height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  background-color: #b1dde8;
+}
+#services .services-bloc h3 {
+  font-size: 1.5 rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+#services .services-bloc p {
+  font-size: 1rem;
+  margin: 10px;
+}
+
+/*---------bloc photo-------*/
+.photo {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.container_photo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  padding: 20px 20px;
+}
+.container_photo div img {
+  width: 360px;
+  max-width: 100%;
+}
+
+/* intégration du hoover sur les photos*/
+.phototest {
+  position: relative;
+  animation-name: zoom;
+}
+
+.text-photo {
+  display: none;
+}
+.text-photo h3 {
+  font-size: 20px;
+}
+.text-photo {
+  opacity: 0.8;
+  background-color: grey;
+  transition: 2s ease-in-out;
+}
+
+.phototest:hover .text-photo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+/*Règle responsive*/
+
+@media (max-width: 960px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  header,
+  .topheader {
+    display: none;
+  }
+  .navigation {
+    display: none;
+  }
+
+  /*début menu hamburger*/
+  .dropdown {
+    display: block;
+  }
+  .dropbtn {
+    position: absolute;
+    right: 0;
+    width: 60px;
+    color: white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #494d49;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+    animation-name: slidedown;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes slidedown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown-content a:hover {
+    color: b1dde8;
+    /*background-color: #f1f1f1;*/
+  }
+
+  .listehamburger {
+    list-style-type: none;
+  }
+
+  .listehamburger li {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /*Fin  menu hamburger*/
+
+  .container_title {
+    display: none;
+  }
+  #img1logo {
+    top: 0;
+    right: -50%;
+  }
+  #img1logo img {
+    position: relative;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+  }
+  /*photo en bas*/
+
+  .container_photo div img {
+    width: 540px;
+    max-width: 100%;
+  }
+  .container_photo {
+    padding: 10px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+
+    column-gap: 40px;
+  }
+  #services .services-bloc {
+    width: auto;
+    margin: 0 20px 20px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #img1logo img {
+    width: 210px;
+  }
+}
